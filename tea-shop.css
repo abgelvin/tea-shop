@@ -5,12 +5,17 @@ body {
     background-color: black;
     opacity: 0.9;
     text-align: center;
+    padding-top: 69px;
 }
 header {
     display: flex;
     justify-content: space-between;
     height: 69px;
     border-bottom: 1px solid seashell;
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    top: 0;
 }
 
 header img{
@@ -34,67 +39,82 @@ a {
     display: flex;
     background-image: url('https://content.codecademy.com/courses/freelance-1/unit-4/img-mission-background.jpg');
     background-repeat: no-repeat;
+    background-position: center;
     width: 100%;
+    max-width: 1200px;
     height: 700px;
     text-align: center;
     justify-content: center;
     align-items: center;
+    flex: 1 1 1200px;
+    margin: auto;
 }
 
 .banner {
     background-color: black;
     width: 100%;
+    flex-grow: 1 2 1200px;
 }
 
-/* .mission h2 {
-    background-color: black;
-    color: seashell;
+.box h4 {
+    margin-top: 10px;
 }
-
-.mission p {
-    background-color: black;
-    color: seashell;
-} */
 
 .featured {
     display: inline-flex;
     flex-wrap: wrap;
-    width: 1000px;
+    max-width: 1000px;
     justify-content: center;
+    flex-grow: 1;
 }
 
 .featured img {
     width: 300px;
     height: 200px;
     margin: 10px;  
+    
+    
 }
 
 .locations {
-    display:    flex;
-    height: 500px;
+    /* flex-direction: column; */
+    min-height: 600px;
     background-image: url('https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg');
     background-repeat: no-repeat;
-   
+    background-size: cover;
+    background-position: center;
+}
+
+.location-title {
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 15px;
 }
 
 .location {
     width: 300px;
     height: 300px;
-    margin: 100px 20px;
+    margin: 0 20px 20px;
     background-color: black;
- 
+    flex-shrink: 0;
 }
 
-h2 {
+.locations-container {
+    display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    
 }
 
 #copyright {
     text-align: left;
 }
 
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
     .featured img {
         flex-wrap: wrap;
     }
-}
+    .location {
+        flex-wrap: wrap;
+    }
+} */
